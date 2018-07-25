@@ -90,6 +90,35 @@
                   </RadioButton>
                </children>
             </HBox>
+            <HBox fx:id="seconderyBox">
+               <children>
+                  <ToggleButton fx:id="reexamButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="31.0" prefWidth="107.0" text="RE-EXAM" textAlignment="CENTER">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="seconderyService" />
+                     </toggleGroup>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin></ToggleButton>
+                  <ToggleButton fx:id="uButton" mnemonicParsing="false" text="UPDATE" textAlignment="CENTER" toggleGroup="$seconderyService">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin></ToggleButton>
+               </children>
+            </HBox>
+            <HBox fx:id="addService">
+               <children>
+                  <ToggleButton mnemonicParsing="false" text="INSCRIPTION">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+                  <ToggleButton mnemonicParsing="false" prefHeight="31.0" prefWidth="74.0" text="SEAL">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+               </children>
+            </HBox>
          </children>
          <BorderPane.margin>
             <Insets />
