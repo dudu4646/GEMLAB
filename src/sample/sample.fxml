@@ -38,6 +38,18 @@
    <left>
       <VBox spacing="10.0" BorderPane.alignment="CENTER">
          <children>
+            <VBox>
+               <children>
+                  <Label text="CLIENT REF:" />
+                  <TextField />
+               </children>
+            </VBox>
+            <HBox maxWidth="1.7976931348623157E308">
+               <children>
+                  <Label text="SHAPE:" />
+                  <ChoiceBox />
+               </children>
+            </HBox>
             <HBox>
                <children>
                   <HBox fx:id="dgBox">
