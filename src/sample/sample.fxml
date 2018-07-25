@@ -52,7 +52,7 @@
                      </padding></Label>
                   <VBox fx:id="shapeBox" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                      <children>
-                        <ChoiceBox fx:id="shape" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" value="bbbbbbb">
+                        <ChoiceBox fx:id="shape" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" >
                            <VBox.margin>
                               <Insets right="60.0" />
                            </VBox.margin></ChoiceBox>

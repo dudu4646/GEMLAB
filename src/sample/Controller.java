@@ -22,12 +22,12 @@ public class Controller {
     @FXML
     private HBox dgBox;
     @FXML
-    private CheckBox shape;
+    private ChoiceBox shape;
 
 
     @FXML
     public void initialize(){
-
+        shape.getItems().addAll(shapes);
     }
 
 
