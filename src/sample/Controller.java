@@ -9,7 +9,7 @@ import sample.classes.Stone;
 
 public class Controller {
     //לטעון רשימת שמות
-    String[] shapes;
+    String[] shapes={"R" , "CU" , "CCR" , "SQ" , "SQEM" , "EM" , "REC" , "TRI", "PR", "HT" , "OTH", " "};
 
     @FXML
     private TextField clientText;
