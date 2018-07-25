@@ -8,6 +8,9 @@ import sample.classes.Stone;
 
 
 public class Controller {
+    //לטעון רשימת שמות
+    String[] shapes;
+
     @FXML
     private TextField clientText;
     @FXML
@@ -18,6 +21,14 @@ public class Controller {
     private RadioButton cdgRadio,cdiorRadio,dgRadio;
     @FXML
     private HBox dgBox;
+    @FXML
+    private CheckBox shape;
+
+
+    @FXML
+    public void initialize(){
+
+    }
 
 
     @FXML
