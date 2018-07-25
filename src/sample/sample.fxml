@@ -1,0 +1,48 @@
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <fx:define>
+        <ToggleGroup fx:id="clientGroup" />
+    </fx:define>
+
+    <top>
+
+        <VBox spacing="15" alignment="CENTER">
+            <Label text="יצירת קבצים" textFill="royalblue">
+                <font>
+                    <Font name="David bold" size="50"/>
+                </font>
+            </Label>
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button fx:id="continue" text=" OK " />
+                <ToggleButton text="YERBRO" toggleGroup="$clientGroup" onAction="#insertClient"/>
+                <ToggleButton text="KUPBRO" toggleGroup="$clientGroup" onAction="#insertClient"/>
+                <ToggleButton text="SAFDIC" toggleGroup="$clientGroup" onAction="#insertClient"/>
+                <ToggleButton text="DALDIA" toggleGroup="$clientGroup" onAction="#insertClient"/>
+                <ToggleButton text="PROTEA" toggleGroup="$clientGroup" onAction="#insertClient"/>
+                <ToggleButton text="YODEIL" toggleGroup="$clientGroup" onAction="#insertClient"/>
+                <Label text="או בחר מהרשימה " />
+                <TextField fx:id="clientText"/>
+                <Label fx:id="clientCode" text=" הכנס קוד לקוח: " />
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <ListView fx:id="stonesList">  </ListView>
+    </center>
+</BorderPane>
+
