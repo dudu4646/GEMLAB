@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 <BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-    
 
     <top>
 
@@ -17,7 +15,7 @@
                 </font>
             </Label>
 
-            <HBox alignment="CENTER" spacing="15">
+            <HBox alignment="CENTER_RIGHT" spacing="15">
                 <Button fx:id="okButton" disable="true" text=" OK " />
                 <ToggleButton onAction="#insertClient" text="YERBRO">
                <toggleGroup>
@@ -29,7 +27,7 @@
                 <ToggleButton onAction="#insertClient" text="PROTEA" toggleGroup="$clientGroup" />
                 <ToggleButton onAction="#insertClient" text="YODEIL" toggleGroup="$clientGroup" />
                 <Label text="או בחר מהרשימה " />
-                <TextField fx:id="clientText" onKeyReleased="#checkCode" />
+                <TextField fx:id="clientText" alignment="CENTER" onKeyReleased="#checkCode" prefHeight="31.0" prefWidth="90.0" />
                 <Label fx:id="clientCode" text=" הכנס קוד לקוח: " />
             </HBox>
         </VBox>
@@ -37,4 +35,68 @@
     <center>
         <ListView fx:id="stonesList">  </ListView>
     </center>
+   <left>
+      <VBox spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox>
+               <children>
+                  <HBox fx:id="dgBox">
+                     <children>
+                        <Label text="DOSS &lt;">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Spinner amountToStepBy="0.01" editable="true" initialValue="1.00" max="100.00" min="0.15" prefHeight="31.0" prefWidth="83.0" />
+                        <Label text="&lt;= DG">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <RadioButton fx:id="dgRadio" mnemonicParsing="false" onAction="#selectColor" selected="true">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="selectColor" />
+                     </toggleGroup>
+                     <HBox.margin>
+                        <Insets left="10.0" top="5.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox fx:id="facncyHbox">
+               <children>
+                  <Label text="FANCY:" />
+                  <Label text="CDG">
+                     <HBox.margin>
+                        <Insets left="14.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton fx:id="cdgRadio" mnemonicParsing="false" onAction="#selectColor" toggleGroup="$selectColor">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <Label text="CDIOR">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton fx:id="cdiorRdaio" mnemonicParsing="false" onAction="#selectColor" toggleGroup="$selectColor">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
 </BorderPane>

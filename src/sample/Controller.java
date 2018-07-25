@@ -2,10 +2,8 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleButton;
+import javafx.scene.control.*;
+import javafx.scene.layout.HBox;
 import sample.classes.Stone;
 
 
@@ -16,6 +14,10 @@ public class Controller {
     private ListView<Stone> stonesList;
     @FXML
     private Button okButton;
+    @FXML
+    private RadioButton cdgRadio,cdiorRadio,dgRadio;
+    @FXML
+    private HBox dgBox;
 
 
     @FXML
@@ -28,5 +30,10 @@ public class Controller {
     @FXML
     public void checkCode(){
         okButton.setDisable((clientText.getText().length()>5)?false:true);
+    }
+
+    @FXML
+    public void selectColor(){
+        dgBox.setDisable(dgRadio.isSelected()?false:true);
     }
 }
