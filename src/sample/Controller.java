@@ -43,8 +43,5 @@ public class Controller {
         okButton.setDisable((clientText.getText().length()>5)?false:true);
     }
 
-    @FXML
-    public void selectColor(){
-        dgBox.setDisable(dgRadio.isSelected()?false:true);
-    }
+
 }
