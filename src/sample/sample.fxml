@@ -28,14 +28,14 @@
 
             <HBox alignment="CENTER_RIGHT" spacing="15">
                 <Button fx:id="okButton" disable="true" text=" OK " />
-                <ToggleButton onAction="#insertClient" text="YERBRO">
+                <ToggleButton onAction="#insertClient" text="KUPBRO">
                <toggleGroup>
                   <ToggleGroup fx:id="clientGroup" />
                </toggleGroup></ToggleButton>
-                <ToggleButton onAction="#insertClient" text="KUPBRO" toggleGroup="$clientGroup" />
                 <ToggleButton onAction="#insertClient" text="SAFDIC" toggleGroup="$clientGroup" />
                 <ToggleButton onAction="#insertClient" text="DALDIA" toggleGroup="$clientGroup" />
                 <ToggleButton onAction="#insertClient" text="PROTEA" toggleGroup="$clientGroup" />
+                <ToggleButton onAction="#insertClient" text="YERBRO" toggleGroup="$clientGroup" />
                 <ToggleButton onAction="#insertClient" text="YODEIL" toggleGroup="$clientGroup" />
                 <Label text="או בחר מהרשימה " />
                 <TextField fx:id="clientText" alignment="CENTER" onKeyReleased="#checkCode" prefHeight="31.0" prefWidth="90.0" />
@@ -94,30 +94,26 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox>
+            <HBox fx:id="dgBox">
                <children>
-                  <HBox fx:id="dgBox">
-                     <children>
-                        <Label text="DOSS">
-                           <HBox.margin>
-                              <Insets left="25.0" right="6.0" top="5.0" />
-                           </HBox.margin>
-                        </Label>
-                        <RadioButton fx:id="dossRadio" mnemonicParsing="false" >
-                           <toggleGroup>
-                              <ToggleGroup fx:id="selectColor" />
-                           </toggleGroup>
-                           <HBox.margin>
-                              <Insets top="5.0" />
-                           </HBox.margin>
-                        </RadioButton>
-                        <Label text="DG">
-                           <HBox.margin>
-                              <Insets left="6.0" right="23.0" top="5.0" />
-                           </HBox.margin>
-                        </Label>
-                     </children>
-                  </HBox>
+                  <Label text="DOSS">
+                     <HBox.margin>
+                        <Insets left="25.0" right="6.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton fx:id="dossRadio" mnemonicParsing="false">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="selectColor" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <Label text="DG">
+                     <HBox.margin>
+                        <Insets left="6.0" right="23.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
                   <RadioButton fx:id="dgRadio" mnemonicParsing="false" selected="true" toggleGroup="$selectColor">
                      <HBox.margin>
                         <Insets left="10.0" top="5.0" />
