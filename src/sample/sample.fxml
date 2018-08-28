@@ -41,28 +41,39 @@
                 <TextField fx:id="clientText" alignment="CENTER" onKeyReleased="#checkCode" prefHeight="31.0" prefWidth="90.0" />
                 <Label fx:id="clientCode" text=" הכנס קוד לקוח: " />
             </HBox>
+         <BorderPane.margin>
+            <Insets bottom="5.0" />
+         </BorderPane.margin>
         </VBox>
     </top>
     <center>
-        <ListView fx:id="stonesList">  </ListView>
+       <VBox maxHeight="1.7976931348623157E308" BorderPane.alignment="BOTTOM_RIGHT">
+          <ListView fx:id="stonesList" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity">
+            <VBox.margin>
+               <Insets right="5.0" />
+            </VBox.margin></ListView>
+       </VBox>
     </center>
    <left>
       <VBox spacing="10.0" BorderPane.alignment="CENTER">
          <children>
             <VBox>
                <children>
-                  <Label text="CLIENT REF:" />
-                  <TextField />
+                  <Label text="CLIENT REF:">
+                     <VBox.margin>
+                        <Insets bottom="2.0" />
+                     </VBox.margin></Label>
+                  <TextField fx:id="clientRef" />
                </children>
             </VBox>
             <VBox spacing="5.0">
                <children>
                   <Label text="PRICE PER CARAT:" />
-                  <TextField />
+                  <TextField fx:id="perCarat" />
                   <Label text="STONE VALUE:" />
+                  <TextField fx:id="total" />
                </children>
             </VBox>
-            <TextField />
             <HBox maxWidth="1.7976931348623157E308">
                <children>
                   <VBox fx:id="shapeBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="5.0" HBox.hgrow="ALWAYS">
@@ -94,7 +105,7 @@
                               <Insets />
                            </VBox.margin>
                         </Label>
-                        <Spinner amountToStepBy="0.01" editable="true" initialValue="1.00" max="100.00" min="0.15" prefHeight="31.0" prefWidth="83.0">
+                        <Spinner fx:id="weight" amountToStepBy="0.01" editable="true" initialValue="1.00" max="100.00" min="0.15" prefHeight="31.0" prefWidth="83.0">
                            <VBox.margin>
                               <Insets left="30.0" />
                            </VBox.margin></Spinner>
